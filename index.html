@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>For you · 七夕</title>
+<style>
+  :root{
+    --bg:#faf6f0;
+    --card:#fffdf9;
+    --ink:#3d3733;
+    --sub:#8a7f78;
+    --accent:#b4635a;
+    --line:#e8dfd6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:420px;
+    margin:0 auto;
+    padding:56px 28px 64px;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:.35em;
+    color:var(--sub);
+    text-align:center;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:30px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-align:center;
+    color:var(--ink);
+    margin-bottom:36px;
+  }
+  h1 .en{
+    font-family:Georgia,"Times New Roman",serif;
+    font-style:italic;
+    font-weight:400;
+    letter-spacing:.02em;
+  }
+  .opening{
+    font-size:15px;
+    color:var(--sub);
+    text-align:center;
+    margin-bottom:44px;
+  }
+  .sec-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:13px;
+    letter-spacing:.28em;
+    color:var(--accent);
+    margin-bottom:22px;
+  }
+  .sec-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .coupon{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    margin-bottom:12px;
+    overflow:hidden;
+  }
+  .coupon .ch{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:16px 18px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    font:inherit;
+    color:var(--ink);
+    -webkit-tap-highlight-color:transparent;
+    text-align:left;
+  }
+  .coupon .ch:hover{
+    background:#fdf6ef;
+  }
+  .coupon .num{
+    font-family:"Songti SC","STSong","SimSun",serif;
+    font-size:16px;
+    color:var(--accent);
+  }
+  .coupon .name{
+    flex:1;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.05em;
+  }
+  .coupon .chev{
+    width:8px;
+    height:8px;
+    border-right:2px solid var(--sub);
+    border-bottom:2px solid var(--sub);
+    transform:rotate(45deg);
+    transition:transform .25s ease;
+    margin-right:4px;
+  }
+  .coupon .cb{
+    max-height:0;
+    overflow:hidden;
+    padding:0 18px;
+    transition:max-height .3s ease, padding .3s ease;
+  }
+  .coupon.open .cb{
+    max-height:320px;
+    padding:0 18px 18px;
+  }
+  .coupon.open .chev{
+    transform:rotate(-135deg);
+  }
+  .coupon .d{
+    font-size:14px;
+    color:var(--ink);
+    line-height:1.85;
+  }
+  .coupon .sub{
+    font-size:13px;
+    color:var(--sub);
+    margin-top:4px;
+  }
+  .coupon .tag{
+    display:inline-block;
+    margin-top:12px;
+    font-size:11px;
+    letter-spacing:.15em;
+    color:var(--accent);
+    border:1px solid #e3c9c4;
+    border-radius:999px;
+    padding:2px 10px;
+  }
+  .expiry{
+    margin:44px auto 0;
+    display:table;
+    font-size:12px;
+    letter-spacing:.2em;
+    color:var(--accent);
+    border:1px solid #e3c9c4;
+    border-radius:999px;
+    padding:6px 18px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="kicker">二〇二六 · 七月初七</p>
+    <h1>七夕 · <span class="en">For you</span></h1>
+
+    <p class="opening">宝宝，七夕快乐！！</p>
+
+    <p class="sec-title">送你四张券！</p>
+
+    <div class="coupon open">
+      <button class="ch" type="button">
+        <span class="num">①</span><span class="name">礼物券</span><span class="chev"></span>
+      </button>
+      <div class="cb">
+        <p class="d">你想要的小礼物！收藏夹里的、逛街看到的，TOP/GD的，俺直接去采购！</p>
+        <span class="tag">任意时段可用</span>
+      </div>
+    </div>
+
+    <div class="coupon">
+      <button class="ch" type="button">
+        <span class="num">②</span><span class="name">香山游</span><span class="chev"></span>
+      </button>
+      <div class="cb">
+        <p class="d">一条龙服务前往香山，你只负责穿上舒服的鞋，一起探索北京！</p>
+        <p class="sub">（亦可选西山、长城等）</p>
+        <span class="tag">任意周末可用</span>
+      </div>
+    </div>
+
+    <div class="coupon">
+      <button class="ch" type="button">
+        <span class="num">③</span><span class="name">美食券</span><span class="chev"></span>
+      </button>
+      <div class="cb">
+        <p class="d">从 奶茶 到 甜品 到 火锅烤肉 到 Omakase，你选店，我们直接前往品鉴！</p>
+        <span class="tag">馋了就出发</span>
+      </div>
+    </div>
+
+    <div class="coupon">
+      <button class="ch" type="button">
+        <span class="num">④</span><span class="name">放松券</span><span class="chev"></span>
+      </button>
+      <div class="cb">
+        <p class="d">宝宝长时间加班熬夜，需要好好休息休息！</p>
+        <p class="sub">咱出发去隐逸！去山河海棠！去你想去的地方放松！</p>
+        <span class="tag">累了就出发</span>
+      </div>
+    </div>
+
+    <p class="expiry">有效期：永久</p>
+  </div>
+
+<script>
+  document.querySelectorAll('.coupon .ch').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.parentNode.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
